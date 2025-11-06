@@ -1,110 +1,278 @@
-# WaveSplit - Advanced Audio Denoiser
 
-An advanced implementation of CleanUNet audio denoising model with novel enhancements for superior speech clarity and noise reduction.
 
-## Overview
+## 🏆 Challenge Track
+**AI-Powered Innovation in Human Resources & Career Development**
 
-WaveSplit transforms the way audio denoising works by intelligently adapting to different noise environments while preserving the natural characteristics of speech. Our approach achieves significant improvements over baseline models by incorporating several innovative techniques:
+---
 
-1. **Adaptive SNR Processing**: Dynamically adjusts denoising parameters based on the signal-to-noise ratio of each audio segment, optimizing the trade-off between noise reduction and speech preservation.
+## 📋 Problem Statement and Summary
 
-2. **Perceptual Enhancement**: Applies psychoacoustic principles to enhance the perceived quality of speech, focusing on frequencies most important to human hearing.
+### **The Problem**
+- **60% of candidates exaggerate** on resumes, making traditional screening unreliable
+- **HR teams miss critical signals** - body language, voice patterns, and emotional cues that reveal true potential
+- **Rejected candidates receive generic feedback** with no actionable path to improvement
+- **Soft skills are hard to measure** objectively, leading to subjective and potentially biased hiring decisions
 
-3. **Harmonic Enhancement**: Selectively boosts harmonic components of speech, which are critical for intelligibility and naturalness.
+### **Our Solution**
+VentureView HR is a dual-portal AI-powered platform that revolutionizes hiring by analyzing **verbal, non-verbal, and cognitive signals** to create holistic candidate profiles.
 
-4. **Vocal Clarity Enhancement**: Applies targeted processing to frequency ranges containing human speech, improving the clarity and presence of vocal content.
+**For Candidates:**
+- AI-powered resume optimization with ATS scoring
+- Smart job matching based on skills and experience
+- Multi-stage assessments (Coding → Technical Interview → HR Interview)
+- Personalized career roadmaps and skill development courses
+- Detailed, actionable feedback on rejections
 
-5. **Dynamic Range Compression** (optional): Reduces the volume difference between loud and soft parts of the audio, making speech more consistently audible in varying noise environments.
+**For HR/Recruiters:**
+- Multi-modal interview analysis dashboard
+- Real-time emotion detection and confidence scoring
+- Voice pattern analysis (pitch, tone, stress indicators)
+- Gaze tracking for engagement measurement
+- Comparative candidate scoring with bias detection
+- Automated feedback generation
 
-6. **Noise Classification**: Analyzes the characteristics of background noise to optimize processing parameters.
+**Key Innovation:** We decode the **unspoken side** of interviews through:
+- 😊 **Facial Expression Analysis** - Confidence, nervousness, authenticity detection
+- 🎤 **Voice Analysis** - Pitch variation, speaking pace, stress patterns
+- 👁️ **Gaze Tracking** - Eye contact as a proxy for engagement
+- 💬 **Answer Evaluation** - Technical depth, clarity, and structure using LLMs
 
-## Why WaveSplit Is Better
+---
 
-WaveSplit outperforms existing solutions in several key areas:
+## 🛠️ Tech Stack and AI Tools Used
 
-### Superior Audio Quality
+### **Frontend**
+- **Next.js 14+** (React App Router)
+- **Tailwind CSS** + **Shadcn UI** (Component library)
+- **Recharts** (Data visualization)
+- **MediaRecorder API** / **Daily.co SDK** (Video recording)
+- **WebGazer.js** (Gaze tracking)
 
-- **+10.2 dB SNR Improvement**: Substantially higher noise reduction compared to baseline models (7.8 dB for Base CleanUNet)
-- **Enhanced PESQ Scores**: 1.05 improvement vs. 0.83 for baseline models
-- **Better Speech Intelligibility**: STOI improvement of 0.15 vs. 0.09-0.13 for competitors
+### **Backend**
+- **Django 5.0** + **Django REST Framework**
+- **PostgreSQL** (Database)
+- **Celery** + **Redis** (Task queue for video processing)
+- **AWS S3** / **Cloudinary** (Video and resume storage)
 
-### More Natural Sound
+### **AI/ML Tools**
+| Tool | Purpose |
+|------|---------|
+| **Claude Sonnet 4.5** | Technical answer evaluation, resume analysis, question generation |
+| **Gemini API** | Resume parsing and optimization suggestions |
+| **AssemblyAI** / **Deepgram** | Speech-to-text transcription with high accuracy |
+| **Hume AI** | Facial emotion detection and voice analysis (prosody, stress) |
+| **WebGazer.js** | Real-time eye tracking and gaze pattern analysis |
+| **Judge0 API** | Coding challenge execution and evaluation |
 
-- **Harmonic Preservation**: Unlike other denoisers that introduce "robotic" artifacts, WaveSplit preserves the natural harmonic structure of speech
-- **Spectral Balance**: Maintains the original spectral characteristics of speech while removing noise
-- **Reduced Artifacts**: Significantly fewer musical noise artifacts compared to traditional methods
+### **Third-Party Integrations**
+- **RapidAPI JSearch** / **Adzuna API** (Job listing aggregation)
+- **SendGrid** / **Resend** (Email automation)
+- **Roadmap.sh** (Career path generation)
 
-### Intelligent Processing
+---
 
-- **Adaptive Intensity**: Applies stronger denoising to noisier segments and lighter processing to cleaner parts, avoiding over-processing
-- **Noise-Type Awareness**: Automatically identifies different noise types (white noise, mechanical noise, crowd noise, etc.) and applies optimal processing strategies
-- **Vocal Focus**: Special attention to the critical 300-3000 Hz range where speech intelligibility is most important
+## 🎥 Demo Link
 
-### Comprehensive Analysis
+**[Watch Our 2-Minute Demo Video](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)**  
+*Showcasing the complete candidate journey from resume upload to multi-modal interview analysis*
 
-- **Detailed Metrics**: Provides extensive audio quality metrics with visualizations
-- **Before/After Comparison**: Interactive spectrogram, waveform, and power spectral density comparisons
-- **Research-Grade Tools**: Includes formal evaluation methodologies (ITU-R BS.1116, MUSHRA) for rigorous assessment
+---
 
-## Getting Started
+## 👥 Team Members
 
-### Prerequisites
+| Name | Email | Role |
+|------|-------|------|
+| **[Your Name]** | yourname@email.com | Full Stack Developer |
+| **[Team Member 2]** | member2@email.com | AI/ML Engineer |
+| **[Team Member 3]** | member3@email.com | UI/UX Designer |
 
-- Python 3.8 or higher
-- CUDA-capable GPU (recommended for faster processing)
+---
 
-### Quick Setup
+## 🚀 Setup / Run Instructions
 
-1. Clone the repository:
+### **Prerequisites**
+- Node.js 18+ and npm
+- Python 3.11+
+- PostgreSQL 14+
+- Redis
+
+---
+
+### **Backend Setup (Django)**
+
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/doshi-kevin/WaveSplit.git
-   cd WaveSplit
+   git clone https://github.com/yourusername/ventureview-hr.git
+   cd ventureview-hr/backend
    ```
 
-2. Create and activate a virtual environment (recommended):
+2. **Create and activate virtual environment**
    ```bash
    python -m venv venv
-   # On Windows
-   venv\Scripts\activate
-   # On macOS/Linux
-   source venv/bin/activate
+   source venv/bin/activate  # Windows: venv\Scripts\activate
    ```
 
-3. Install the required dependencies:
+3. **Install dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Launch the Gradio web interface:
+4. **Set up environment variables**
    ```bash
-   python gradio_app.py
+   cp .env.example .env
+   ```
+   
+   Edit `.env` with your API keys:
+   ```env
+   # Django
+   SECRET_KEY=your_django_secret_key
+   DEBUG=True
+   
+   # Database
+   DATABASE_URL=postgresql://user:password@localhost:5432/ventureview
+   
+   # AI Services
+   CLAUDE_API_KEY=your_claude_api_key
+   GEMINI_API_KEY=your_gemini_api_key
+   ASSEMBLYAI_API_KEY=your_assemblyai_key
+   HUME_API_KEY=your_hume_ai_key
+   
+   # Storage
+   AWS_ACCESS_KEY_ID=your_aws_key
+   AWS_SECRET_ACCESS_KEY=your_aws_secret
+   AWS_STORAGE_BUCKET_NAME=your_bucket_name
+   
+   # Other APIs
+   SENDGRID_API_KEY=your_sendgrid_key
+   JUDGE0_API_KEY=your_judge0_key
+   RAPID_API_KEY=your_rapidapi_key
    ```
 
-5. Open your browser and navigate to:
+5. **Run database migrations**
+   ```bash
+   python manage.py migrate
    ```
-   http://localhost:7862
+
+6. **Create superuser (optional)**
+   ```bash
+   python manage.py createsuperuser
    ```
 
-## Use Cases
+7. **Start Redis (in a separate terminal)**
+   ```bash
+   redis-server
+   ```
 
-- **Podcast Production**: Clean up interview recordings with varying acoustic conditions
-- **Video Conferencing**: Improve clarity of speech in noisy environments
-- **Lecture Recordings**: Remove background noise from educational content
-- **Voice Memos**: Enhance the quality of mobile voice recordings
-- **Speech Recognition Preprocessing**: Improve accuracy of ASR systems by providing cleaner input
+8. **Start Celery worker (in a separate terminal)**
+   ```bash
+   celery -A ventureview worker -l info
+   ```
 
-## Research Foundation
+9. **Run the development server**
+   ```bash
+   python manage.py runserver
+   ```
+   
+   Backend will be available at `http://localhost:8000`
 
-WaveSplit builds upon the latest advancements in speech enhancement research, combining state-of-the-art neural network architecture with novel innovations in perceptual audio processing.
+---
 
-The technology has been developed with a focus on real-world applications, balancing theoretical performance with practical usability. Current development is focused on preparing research publications that detail the technical advances and comparative evaluations against leading solutions in the field.
+### **Frontend Setup (Next.js)**
 
-## Project Images
+1. **Navigate to frontend directory**
+   ```bash
+   cd ../frontend
+   ```
 
-![plot](images/Screenshot%202025-05-10%20121939.png)
-![plot](images/Screenshot%202025-05-10%20121951.png)
-![plot](images/WhatsApp%20Image%202025-05-10%20at%2002.13.20_49188ace.jpg)
-![plot](images/WhatsApp%20Image%202025-05-10%20at%2002.13.35_e14405f5.jpg)
-![plot](images/noise_reduction_map.png)
-![plot](images/psd_comparison.png)
-![plot](images/spectrograms%20(1).png)
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   cp .env.local.example .env.local
+   ```
+   
+   Edit `.env.local`:
+   ```env
+   NEXT_PUBLIC_API_URL=http://localhost:8000/api
+   NEXT_PUBLIC_WEBSOCKET_URL=ws://localhost:8000/ws
+   NEXT_PUBLIC_DAILY_API_KEY=your_daily_co_key
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+   
+   Frontend will be available at `http://localhost:3000`
+
+---
+
+### **Quick Start (All Services)**
+
+Run all services together (requires 4 terminal windows):
+
+```bash
+# Terminal 1 - Redis
+redis-server
+
+# Terminal 2 - Celery
+cd backend && celery -A ventureview worker -l info
+
+# Terminal 3 - Django
+cd backend && python manage.py runserver
+
+# Terminal 4 - Next.js
+cd frontend && npm run dev
+```
+
+---
+
+### **Access Points**
+- **Frontend (Candidate/HR Portal)**: http://localhost:3000
+- **Backend API**: http://localhost:8000/api
+- **Django Admin**: http://localhost:8000/admin
+- **API Documentation**: http://localhost:8000/api/docs
+
+---
+
+### **Test Accounts**
+
+**Candidate Login:**
+- Email: candidate@test.com
+- Password: Test@1234
+
+**HR Login:**
+- Email: hr@test.com
+- Password: Test@1234
+
+---
+
+### **Troubleshooting**
+
+**PostgreSQL Connection Error:**
+- Ensure PostgreSQL is running: `sudo service postgresql start`
+- Create database: `createdb ventureview`
+
+**Redis Connection Error:**
+- Start Redis: `redis-server` or `sudo service redis-server start`
+
+**Port Already in Use:**
+- Django: Use `python manage.py runserver 8001`
+- Next.js: Use `npm run dev -- -p 3001`
+
+**Missing Dependencies:**
+- Backend: `pip install -r requirements.txt`
+- Frontend: `rm -rf node_modules && npm install`
+
+---
+
+## 📞 Support
+
+For any setup issues or questions:
+- Open an issue on GitHub
+- Email: contact@ventureview-hr.com
+
+https://www.loom.com/share/fe80150dd70d45669364ed774293576f
