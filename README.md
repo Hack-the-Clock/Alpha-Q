@@ -82,9 +82,9 @@ VentureView HR is a dual-portal AI-powered platform that revolutionizes hiring b
 
 | Name | Email | Role |
 |------|-------|------|
-| **Kevin Doshi** | yourname@email.com | Full Stack Developer |
-| **Kunj Pandya** | member2@email.com | AI/ML Engineer |
-| **Mandar Bavdani** | member3@email.com | UI/UX Designer |
+| **Kevin Doshi** | kdoshi@stevens.edu | Full Stack Developer |
+| **Mandar Bavdane** | mbavdane@stevens.edu | Software Development Engineer |
+| **Kunj Pandya** | kpandya@stevens.edu | AI/ML Engineer |
 
 ---
 
